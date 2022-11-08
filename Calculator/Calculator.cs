@@ -4,7 +4,8 @@ namespace Calculator
     {
         public Calculator()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
+        
     }
 }
