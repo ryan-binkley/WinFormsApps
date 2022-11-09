@@ -30,27 +30,46 @@
         private void InitializeComponent()
         {
             this.ControlBarPanel = new System.Windows.Forms.Panel();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.ControlBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ControlBarPanel
             // 
+            this.ControlBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ControlBarPanel.Controls.Add(this.ExitButton);
             this.ControlBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControlBarPanel.Location = new System.Drawing.Point(0, 0);
             this.ControlBarPanel.Name = "ControlBarPanel";
             this.ControlBarPanel.Size = new System.Drawing.Size(400, 40);
             this.ControlBarPanel.TabIndex = 0;
-            this.ControlBarPanel.BackColor = Color.FromArgb(51, 51, 51);
+            this.ControlBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ControlBarPanel_MouseDown);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ExitButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitButton.Location = new System.Drawing.Point(359, 3);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(38, 34);
+            this.ExitButton.TabIndex = 1;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = true;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 600);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.ClientSize = new System.Drawing.Size(400, 700);
+            this.ControlBox = false;
             this.Controls.Add(this.ControlBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Calculator";
             this.Text = "Calculator";
-            this.BackColor = Color.FromArgb(153, 153, 153);
+            this.ControlBarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -58,5 +77,6 @@
         #endregion
 
         private Panel ControlBarPanel;
+        private Button ExitButton;
     }
 }
