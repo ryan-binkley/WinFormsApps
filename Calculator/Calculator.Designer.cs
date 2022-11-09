@@ -503,7 +503,6 @@
             this.ControlBarPanel.ResumeLayout(false);
             this.InputPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion
