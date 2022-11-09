@@ -37,7 +37,7 @@
             this.EqualsButton = new System.Windows.Forms.Button();
             this.DecimalButton = new System.Windows.Forms.Button();
             this.ZeroButton = new System.Windows.Forms.Button();
-            this.PositiveNegativeButton = new System.Windows.Forms.Button();
+            this.MinusButton = new System.Windows.Forms.Button();
             this.AdditionButton = new System.Windows.Forms.Button();
             this.MultiplyButton = new System.Windows.Forms.Button();
             this.DivideButton = new System.Windows.Forms.Button();
@@ -119,13 +119,14 @@
             this.NumberOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NumberOutputTextBox.Font = new System.Drawing.Font("Cascadia Mono SemiLight", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NumberOutputTextBox.ForeColor = System.Drawing.SystemColors.Control;
-            this.NumberOutputTextBox.Location = new System.Drawing.Point(60, 40);
+            this.NumberOutputTextBox.Location = new System.Drawing.Point(26, 40);
+            this.NumberOutputTextBox.Multiline = false;
             this.NumberOutputTextBox.Name = "NumberOutputTextBox";
             this.NumberOutputTextBox.ReadOnly = true;
-            this.NumberOutputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.NumberOutputTextBox.Size = new System.Drawing.Size(328, 62);
+            this.NumberOutputTextBox.Size = new System.Drawing.Size(362, 62);
             this.NumberOutputTextBox.TabIndex = 0;
             this.NumberOutputTextBox.Text = "";
+            this.NumberOutputTextBox.SelectionAlignment = HorizontalAlignment.Right;
             // 
             // EqualsButton
             // 
@@ -152,7 +153,7 @@
             this.DecimalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DecimalButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DecimalButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.DecimalButton.Location = new System.Drawing.Point(202, 598);
+            this.DecimalButton.Location = new System.Drawing.Point(106, 598);
             this.DecimalButton.Name = "DecimalButton";
             this.DecimalButton.Size = new System.Drawing.Size(90, 90);
             this.DecimalButton.TabIndex = 4;
@@ -169,7 +170,7 @@
             this.ZeroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ZeroButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ZeroButton.Location = new System.Drawing.Point(106, 598);
+            this.ZeroButton.Location = new System.Drawing.Point(10, 598);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(90, 90);
             this.ZeroButton.TabIndex = 5;
@@ -177,21 +178,22 @@
             this.ZeroButton.UseVisualStyleBackColor = false;
             this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
             // 
-            // PositiveNegativeButton
+            // MinusButton
             // 
-            this.PositiveNegativeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.PositiveNegativeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.PositiveNegativeButton.FlatAppearance.BorderSize = 0;
-            this.PositiveNegativeButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.PositiveNegativeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PositiveNegativeButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PositiveNegativeButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.PositiveNegativeButton.Location = new System.Drawing.Point(10, 598);
-            this.PositiveNegativeButton.Name = "PositiveNegativeButton";
-            this.PositiveNegativeButton.Size = new System.Drawing.Size(90, 90);
-            this.PositiveNegativeButton.TabIndex = 6;
-            this.PositiveNegativeButton.Text = "+/-";
-            this.PositiveNegativeButton.UseVisualStyleBackColor = false;
+            this.MinusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MinusButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.MinusButton.FlatAppearance.BorderSize = 0;
+            this.MinusButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.MinusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinusButton.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinusButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.MinusButton.Location = new System.Drawing.Point(298, 406);
+            this.MinusButton.Name = "MinusButton";
+            this.MinusButton.Size = new System.Drawing.Size(90, 90);
+            this.MinusButton.TabIndex = 6;
+            this.MinusButton.Text = "-";
+            this.MinusButton.UseVisualStyleBackColor = false;
+            this.MinusButton.Click += new System.EventHandler(this.MinusButton_Click);
             // 
             // AdditionButton
             // 
@@ -200,7 +202,7 @@
             this.AdditionButton.FlatAppearance.BorderSize = 0;
             this.AdditionButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.AdditionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdditionButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdditionButton.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdditionButton.ForeColor = System.Drawing.SystemColors.Control;
             this.AdditionButton.Location = new System.Drawing.Point(298, 502);
             this.AdditionButton.Name = "AdditionButton";
@@ -208,6 +210,7 @@
             this.AdditionButton.TabIndex = 7;
             this.AdditionButton.Text = "+";
             this.AdditionButton.UseVisualStyleBackColor = false;
+            this.AdditionButton.Click += new System.EventHandler(this.AdditionButton_Click);
             // 
             // MultiplyButton
             // 
@@ -218,12 +221,13 @@
             this.MultiplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MultiplyButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MultiplyButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.MultiplyButton.Location = new System.Drawing.Point(298, 406);
+            this.MultiplyButton.Location = new System.Drawing.Point(298, 310);
             this.MultiplyButton.Name = "MultiplyButton";
             this.MultiplyButton.Size = new System.Drawing.Size(90, 90);
             this.MultiplyButton.TabIndex = 8;
             this.MultiplyButton.Text = "X";
             this.MultiplyButton.UseVisualStyleBackColor = false;
+            this.MultiplyButton.Click += new System.EventHandler(this.MultiplyButton_Click);
             // 
             // DivideButton
             // 
@@ -234,12 +238,13 @@
             this.DivideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DivideButton.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DivideButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.DivideButton.Location = new System.Drawing.Point(298, 310);
+            this.DivideButton.Location = new System.Drawing.Point(298, 214);
             this.DivideButton.Name = "DivideButton";
             this.DivideButton.Size = new System.Drawing.Size(90, 90);
             this.DivideButton.TabIndex = 9;
             this.DivideButton.Text = "÷";
             this.DivideButton.UseVisualStyleBackColor = false;
+            this.DivideButton.Click += new System.EventHandler(this.DivideButton_Click);
             // 
             // BackspaceButton
             // 
@@ -250,12 +255,13 @@
             this.BackspaceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackspaceButton.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BackspaceButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackspaceButton.Location = new System.Drawing.Point(298, 214);
+            this.BackspaceButton.Location = new System.Drawing.Point(202, 214);
             this.BackspaceButton.Name = "BackspaceButton";
             this.BackspaceButton.Size = new System.Drawing.Size(90, 90);
             this.BackspaceButton.TabIndex = 10;
             this.BackspaceButton.Text = "←";
             this.BackspaceButton.UseVisualStyleBackColor = false;
+            this.BackspaceButton.Click += new System.EventHandler(this.BackspaceButton_Click);
             // 
             // ThreeButton
             // 
@@ -419,12 +425,13 @@
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ClearButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.ClearButton.Location = new System.Drawing.Point(202, 214);
+            this.ClearButton.Location = new System.Drawing.Point(202, 598);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(90, 90);
             this.ClearButton.TabIndex = 20;
             this.ClearButton.Text = "C";
             this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // CloseParenthesis
             // 
@@ -441,6 +448,7 @@
             this.CloseParenthesis.TabIndex = 21;
             this.CloseParenthesis.Text = ")";
             this.CloseParenthesis.UseVisualStyleBackColor = false;
+            this.CloseParenthesis.Click += new System.EventHandler(this.CloseParenthesis_Click);
             // 
             // OpenParenthesis
             // 
@@ -457,6 +465,7 @@
             this.OpenParenthesis.TabIndex = 22;
             this.OpenParenthesis.Text = "(";
             this.OpenParenthesis.UseVisualStyleBackColor = false;
+            this.OpenParenthesis.Click += new System.EventHandler(this.OpenParenthesis_Click);
             // 
             // Calculator
             // 
@@ -466,6 +475,7 @@
             this.ClientSize = new System.Drawing.Size(400, 700);
             this.ControlBox = false;
             this.Controls.Add(this.OpenParenthesis);
+            this.Controls.Add(this.MinusButton);
             this.Controls.Add(this.CloseParenthesis);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.SevenButton);
@@ -481,7 +491,6 @@
             this.Controls.Add(this.DivideButton);
             this.Controls.Add(this.MultiplyButton);
             this.Controls.Add(this.AdditionButton);
-            this.Controls.Add(this.PositiveNegativeButton);
             this.Controls.Add(this.ZeroButton);
             this.Controls.Add(this.DecimalButton);
             this.Controls.Add(this.EqualsButton);
@@ -507,7 +516,7 @@
         private Button EqualsButton;
         private Button DecimalButton;
         private Button ZeroButton;
-        private Button PositiveNegativeButton;
+        private Button MinusButton;
         private Button AdditionButton;
         private Button MultiplyButton;
         private Button DivideButton;

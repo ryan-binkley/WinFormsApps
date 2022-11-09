@@ -89,5 +89,48 @@ namespace Calculator
         {
             this.NumberOutputTextBox.Text += ".";
         }
+
+        private void BackspaceButton_Click(object sender, EventArgs e)
+        {
+            if (this.NumberOutputTextBox.Text != "")
+            {
+                this.NumberOutputTextBox.Text = this.NumberOutputTextBox.Text.Substring(0, (this.NumberOutputTextBox.TextLength - 1));
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text = "";
+        }
+
+        private void OpenParenthesis_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += "(";
+        }
+
+        private void CloseParenthesis_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += ")";
+        }
+
+        private void AdditionButton_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += "+";
+        }
+
+        private void MinusButton_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += "-";
+        }
+
+        private void MultiplyButton_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += "*";
+        }
+
+        private void DivideButton_Click(object sender, EventArgs e)
+        {
+            this.NumberOutputTextBox.Text += "/";
+        }
     }
 }
